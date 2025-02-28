@@ -1,84 +1,108 @@
+#!/usr/bin/env python3
 """レーダーチャートウィジェット"""
+
 import numpy as np
-from PyQt5.QtWidgets import QWidget, QVBoxLayout
+import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-import matplotlib.pyplot as plt
+from PyQt5.QtWidgets import QSizePolicy
+from src.skill_matrix_manager.utils.debug_logger import DebugLogger
 
-class RadarChartWidget(QWidget):
-    """Matplotlibを使用したレーダーチャートウィジェット"""
+logger = DebugLogger.get_logger()
+
+class RadarChart(FigureCanvas):
+    """レーダーチャートを描画するウィジェット"""
     
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.setup_ui()
+    def __init__(self, parent=None, width=5, height=4, dpi=100):
+        """初期化"""
+        self.fig = Figure(figsize=(width, height), dpi=dpi)
+        self.axes = self.fig.add_subplot(111, polar=True)
         
-    def setup_ui(self):
-        """UIの初期設定"""
-        layout = QVBoxLayout(self)
-        layout.setContentsMargins(0, 0, 0, 0)
+        # キャンバス初期化
+        super().__init__(self.fig)
+        self.setParent(parent)
         
-        # Matplotlibの図を作成
-        self.figure = Figure(figsize=(6, 6), dpi=100)
-        self.canvas = FigureCanvas(self.figure)
-        layout.addWidget(self.canvas)
+        # サイズポリシー設定
+        FigureCanvas.setSizePolicy(self,
+                                  QSizePolicy.Expanding,
+                                  QSizePolicy.Expanding)
+        FigureCanvas.updateGeometry(self)
         
-        # 初期チャート表示
-        self.display_empty_chart()
+        # データ初期化
+        self.categories = []
+        self.current_values = []
+        self.target_values = []
+        self.max_value = 5  # スキルレベルの最大値
+        
+        self._setup_chart()
     
-    def display_empty_chart(self):
-        """空のレーダーチャートを表示"""
-        self.figure.clear()
-        ax = self.figure.add_subplot(111, polar=True)
-        ax.set_title('スキルギャップ分析', size=14)
-        ax.text(0, 0, "データがありません", 
-                ha='center', va='center', fontsize=12, color='gray')
-        self.canvas.draw()
+    def _setup_chart(self):
+        """チャートの基本設定"""
+        self.axes.clear()
+        self.axes.set_theta_zero_location('N')  # 上部から開始
+        self.axes.set_theta_direction(-1)  # 時計回り
+        self.axes.set_ylim(0, self.max_value)
+        self.axes.grid(True)
     
-    def update_chart(self, labels, current_values, target_values):
-        """チャートを更新
-        
-        Args:
-            labels (list): スキル名のリスト
-            current_values (list): 現在のスキルレベル値のリスト
-            target_values (list): 目標のスキルレベル値のリスト
-        """
-        # データが空の場合
-        if not labels or not current_values or not target_values:
-            self.display_empty_chart()
+    def update_chart(self, categories, current_values, target_values=None, title=None):
+        """チャートのデータを更新して描画"""
+        if not categories or not current_values:
+            logger.warning("レーダーチャート更新: データが空です")
+            return
+            
+        if len(categories) != len(current_values):
+            logger.error("レーダーチャート更新: カテゴリとデータの長さが一致しません")
             return
         
-        # 図をクリア
-        self.figure.clear()
+        # データ保存
+        self.categories = categories
+        self.current_values = current_values
+        self.target_values = target_values or []
         
-        # 極座標のサブプロットを追加
-        ax = self.figure.add_subplot(111, polar=True)
-        
-        # 角度の計算（各スキルが均等に配置されるように）
-        N = len(labels)
-        angles = [n / float(N) * 2 * np.pi for n in range(N)]
-        angles += angles[:1]  # 閉じた形にするために最初の点を追加
-        
-        # 現在値と目標値を角度に合わせて調整
-        current = current_values + [current_values[0]]
-        target = target_values + [target_values[0]]
-        
-        # レーダーチャートの描画
-        ax.plot(angles, target, 'r-', linewidth=2, label='目標値')
-        ax.fill(angles, target, 'r', alpha=0.1)
-        
-        ax.plot(angles, current, 'b-', linewidth=2, label='現在値')
-        ax.fill(angles, current, 'b', alpha=0.1)
-        
-        # 目盛りの設定
-        ax.set_thetagrids(np.degrees(angles[:-1]), labels)
-        ax.set_ylim(0, 5)  # スキルレベルの範囲
-        ax.set_yticks([1, 2, 3, 4, 5])
-        ax.set_yticklabels(['1', '2', '3', '4', '5'])
-        ax.set_theta_zero_location('N')  # 0度を北に設定
-        
-        # タイトルと凡例
-        ax.set_title('スキルギャップ分析', size=14)
-        ax.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
-        
-        # キャンバスの更新
-        self.canvas.draw()
+        # チャート描画
+        self._draw_chart(title)
+    
+    def _draw_chart(self, title=None):
+        """チャートを描画"""
+        try:
+            # 設定をリセット
+            self._setup_chart()
+            
+            # カテゴリ数に応じた角度を計算
+            N = len(self.categories)
+            if N < 3:
+                logger.warning("レーダーチャート描画: カテゴリが3つ未満です")
+                return
+                
+            angles = np.linspace(0, 2*np.pi, N, endpoint=False).tolist()
+            
+            # 閉じた形にするため、最初の点を最後にも追加
+            values = self.current_values + [self.current_values[0]]
+            angles = angles + [angles[0]]
+            
+            # 現在値のプロット
+            self.axes.plot(angles, values, 'o-', linewidth=2, label='現在')
+            self.axes.fill(angles, values, alpha=0.25)
+            
+            # 目標値がある場合は描画
+            if self.target_values and len(self.target_values) == N:
+                target_values = self.target_values + [self.target_values[0]]
+                self.axes.plot(angles, target_values, 'o--', linewidth=2, label='目標')
+            
+            # カテゴリラベル設定
+            self.axes.set_xticks(angles[:-1])
+            self.axes.set_xticklabels(self.categories)
+            
+            # タイトル設定
+            if title:
+                self.axes.set_title(title)
+            
+            # 凡例表示
+            if self.target_values:
+                self.axes.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
+            
+            self.draw()
+            logger.info(f"レーダーチャート描画: {N}項目")
+            
+        except Exception as e:
+            logger.error(f"レーダーチャート描画エラー: {e}")

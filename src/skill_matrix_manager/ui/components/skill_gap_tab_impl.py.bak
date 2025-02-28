@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+"""スキルギャップタブ - 目標値設定に特化"""
+
+from PyQt5.QtWidgets import (
+    QWidget, QVBoxLayout, QHBoxLayout, QPushButton, 
+    QLabel, QMessageBox, QGroupBox
+)
+from PyQt5.QtCore import Qt
+
+from src.skill_matrix_manager.ui.components.skill_gap_tab.staged_target_tab import StagedTargetTab
+from src.skill_matrix_manager.ui.components.skill_gap_tab.radar_chart_dialog import RadarChartDialog
+from src.skill_matrix_manager.services import SkillService
+from src.skill_matrix_manager.utils.debug_logger import DebugLogger
+
+logger = DebugLogger.get_logger()
+
+class SkillGapTab(QWidget):
+    """スキルギャップタブ - 目標値設定に特化"""
+    
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.parent = parent
+        logger.info("スキルギャップタブ初期化 - 目標値設定特化版")
+        
+        # スキルサービスの初期化
+        self.skill_service = SkillService()
+        self.current_member_id = None
+        
+        # UIのセットアップ
+        self.setup_ui()
+    
+    def setup_ui(self):
+        """UIの初期化"""
+        main_layout = QVBoxLayout(self)
+        
+        # 上部ツールバー
+        tools_layout = QHBoxLayout()
+        
+        # 更新ボタン
+        self.refresh_btn = QPushButton("データ更新")
+        self.refresh_btn.clicked.connect(self.refresh_data)
+        tools_layout.addWidget(self.refresh_btn)
+        
+        # レーダーチャートボタン
+        self.chart_btn = QPushButton("レーダーチャート表示")
+        self.chart_btn.clicked.connect(self.show_radar_chart)
+        tools_layout.addWidget(self.chart_btn)
+        
+        tools_layout.addStretch()
+        
+        # 現在のメンバー表示
+        self.member_label = QLabel("メンバー未選択")
+        tools_layout.addWidget(self.member_label)
+        
+        main_layout.addLayout(tools_layout)
+        
+        # ステージ別スキル目標設定
+        self.staged_target = StagedTargetTab()
+        main_layout.addWidget(self.staged_target)
+        
+        # 初期状態では無効
+        self.set_ui_enabled(False)
+    
+    def set_ui_enabled(self, enabled):
+        """UI要素の有効/無効を切り替え"""
+        self.refresh_btn.setEnabled(enabled)
+        self.chart_btn.setEnabled(enabled)
+        # TODO: StagedTargetTabのUI有効/無効設定
+    
+    def on_member_selected(self, member_id):
+        """メンバー選択時"""
+        if member_id:
+            self.current_member_id = member_id
+            self.load_member_data(member_id)
+            self.set_ui_enabled(True)
+        else:
+            self.current_member_id = None
+            self.member_label.setText("メンバー未選択")
+            self.set_ui_enabled(False)
+    
+    def load_member_data(self, member_id):
+        """メンバーデータの読み込みと表示"""
+        try:
+            # メンバー情報を設定
+            member = self.skill_service.get_member(member_id)
+            if not member:
+                logger.error(f"メンバーが見つかりません: ID={member_id}")
+                return
+                
+            # メンバー表示更新
+            name = member['name']
+            group = member['group_name'] or "未所属"
+            self.member_label.setText(f"メンバー: {name} ({group})")
+            
+            logger.info(f"メンバー選択: {name} (ID={member_id})")
+            
+            # スキルマトリックスデータをロード
+            matrix = self.skill_service.get_skill_matrix(member_id)
+            if matrix:
+                # TODO: StagedTargetTabにデータを設定する処理
+                # self.staged_target.set_data(matrix)
+                pass
+                
+        except Exception as e:
+            logger.error(f"メンバーデータ読み込みエラー: {e}")
+            QMessageBox.warning(self, "エラー", f"メンバーデータの読み込みに失敗しました: {str(e)}")
+    
+    def refresh_data(self):
+        """データの再読み込み"""
+        if self.current_member_id:
+            self.load_member_data(self.current_member_id)
+            QMessageBox.information(self, "更新完了", "データを最新の状態に更新しました")
+    
+    def show_radar_chart(self):
+        """レーダーチャート表示"""
+        try:
+            if not self.current_member_id:
+                QMessageBox.warning(self, "警告", "先にメンバーを選択してください")
+                return
+                
+            # レーダーチャート用データを取得
+            stages, stage_data = self.skill_service.get_skill_data_for_radar_chart(self.current_member_id)
+            
+            if not stages or not stage_data:
+                QMessageBox.warning(self, "警告", "表示するスキルデータがありません")
+                return
+                
+            logger.info(f"レーダーチャート表示: ステージ数={len(stages)}, スキル数={len(stage_data)}")
+            
+            # チャート表示
+            dialog = RadarChartDialog(stages, stage_data)
+            dialog.exec_()
+            
+        except Exception as e:
+            logger.error(f"チャート表示エラー: {e}")
+            import traceback
+            traceback.print_exc()
+            QMessageBox.warning(self, "エラー", f"チャート表示中にエラーが発生しました: {str(e)}")
+            
+    def set_member(self, member_id):
+        """外部からメンバーを設定するメソッド（既存インターフェースとの互換性用）"""
+        if member_id:
+            self.on_member_selected(member_id)
+            return True
+        return False

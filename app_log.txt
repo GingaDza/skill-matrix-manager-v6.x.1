@@ -107,3 +107,713 @@ Application started at: 2025-02-21 21:55:30
 User: root
 Dark Mode: False
 --------------------------------------------------
+Application started at: 2025-02-28 17:31:56
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 17:31:57,011 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 17:31:57,324 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:31:57,324 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:31:57,324 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:31:57,325 - skill_matrix - INFO - ユーザーリスト更新完了: 0人
+2025-02-28 17:31:57,325 - skill_matrix - INFO - グループコンボボックス更新完了: 0グループ
+2025-02-28 17:31:57,325 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:31:57,325 - skill_matrix - INFO - ユーザーリスト更新完了: 0人
+2025-02-28 17:31:57,366 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:32:00,064 - skill_matrix - INFO - ユーザー追加ダイアログ表示
+2025-02-28 17:32:15,740 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:32:15,740 - skill_matrix - INFO - グループ AAAA を追加しました
+2025-02-28 17:32:15,741 - skill_matrix - INFO - メインウィンドウのグループコンボボックス更新を呼び出し
+2025-02-28 17:32:15,741 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:32:15,741 - skill_matrix - INFO - グループ選択変更: 
+2025-02-28 17:32:15,741 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:15,742 - skill_matrix - INFO - ユーザーリスト更新完了: 1人
+2025-02-28 17:32:15,742 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:32:15,742 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:15,743 - skill_matrix - INFO - ユーザーリスト更新完了: 1人
+2025-02-28 17:32:15,743 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:32:15,743 - skill_matrix - INFO - グループコンボボックス更新完了: 1グループ
+2025-02-28 17:32:15,743 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:15,743 - skill_matrix - INFO - ユーザーリスト更新完了: 1人
+2025-02-28 17:32:24,523 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:32:24,523 - skill_matrix - INFO - グループ BBBB を追加しました
+2025-02-28 17:32:24,523 - skill_matrix - INFO - メインウィンドウのグループコンボボックス更新を呼び出し
+2025-02-28 17:32:24,523 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:32:24,524 - skill_matrix - INFO - グループ選択変更: 
+2025-02-28 17:32:24,524 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:24,526 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:32:24,528 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:24,528 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:32:24,528 - skill_matrix - INFO - ユーザーリスト更新完了: 2人
+2025-02-28 17:32:24,529 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:32:24,529 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:24,529 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:32:24,530 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:24,530 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:32:24,530 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:32:24,531 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:24,531 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:32:24,531 - skill_matrix - INFO - ユーザーリスト更新完了: 2人
+2025-02-28 17:32:24,531 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:32:24,531 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:32:24,531 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 17:32:24,531 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:24,531 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:32:24,532 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:24,532 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:32:24,533 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:32:24,533 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:24,533 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:32:24,534 - skill_matrix - INFO - ユーザーリスト更新完了: 2人
+2025-02-28 17:32:27,010 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:32:27,012 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:27,012 - skill_matrix - INFO - メンバーを設定: _dummy_BBBB
+2025-02-28 17:32:27,526 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:32:27,529 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:27,530 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:32:28,784 - skill_matrix - INFO - グループ選択変更: AAAA
+2025-02-28 17:32:28,784 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:28,784 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:32:28,785 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:28,785 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:32:28,787 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:32:28,787 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:28,787 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:32:28,787 - skill_matrix - INFO - ユーザーリスト更新完了: 1人
+2025-02-28 17:32:30,051 - skill_matrix - INFO - グループ選択変更: BBBB
+2025-02-28 17:32:30,051 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:30,051 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:32:30,052 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:30,052 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:32:30,054 - skill_matrix - INFO - ユーザーリスト更新完了: 1人
+2025-02-28 17:32:31,467 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:32:31,467 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:31,469 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:32:31,470 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:31,470 - skill_matrix - INFO - メンバーを設定: _dummy_BBBB
+2025-02-28 17:32:31,470 - skill_matrix - INFO - ユーザーリスト更新完了: 2人
+2025-02-28 17:32:33,766 - skill_matrix - INFO - グループ選択変更: AAAA
+2025-02-28 17:32:33,766 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:33,767 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:32:33,768 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:33,768 - skill_matrix - INFO - メンバーを設定: _dummy_BBBB
+2025-02-28 17:32:33,770 - skill_matrix - INFO - ユーザーリスト更新完了: 1人
+2025-02-28 17:32:35,161 - skill_matrix - INFO - ユーザー追加ダイアログ表示
+2025-02-28 17:32:39,771 - skill_matrix - INFO - ユーザー追加: AAA, グループ: AAAA
+2025-02-28 17:32:39,773 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:32:39,774 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:32:39,774 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:32:39,774 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:32:39,774 - skill_matrix - INFO - ユーザーリスト更新完了: 2人
+Application started at: 2025-02-28 17:37:05
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 17:37:05,906 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化開始 =====
+2025-02-28 17:37:05,906 - skill_matrix - INFO - StagedTargetTabのインポート試行
+2025-02-28 17:37:05,908 - skill_matrix - INFO - StagedTargetTabインポート成功
+2025-02-28 17:37:05,909 - skill_matrix - INFO - RadarChartDialogのインポート試行
+2025-02-28 17:37:05,910 - skill_matrix - INFO - RadarChartDialogインポート成功
+2025-02-28 17:37:05,910 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化完了 =====
+2025-02-28 17:37:05,911 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 17:37:06,195 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 17:37:06,211 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:37:06,212 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:37:06,212 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:37:06,212 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:37:06,212 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:37:06,212 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:37:06,212 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 17:37:06,212 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:37:06,212 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:37:06,212 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:37:06,253 - skill_matrix - INFO - メインウィンドウ表示
+Application started at: 2025-02-28 17:40:29
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 17:40:29,864 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化開始 =====
+2025-02-28 17:40:29,864 - skill_matrix - INFO - StagedTargetTabのインポート試行
+2025-02-28 17:40:29,864 - skill_matrix - INFO - StagedTargetTabインポート成功
+2025-02-28 17:40:29,864 - skill_matrix - INFO - RadarChartDialogのインポート試行
+2025-02-28 17:40:29,865 - skill_matrix - INFO - RadarChartDialogインポート成功
+2025-02-28 17:40:29,865 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化完了 =====
+2025-02-28 17:40:29,866 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 17:40:30,152 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 17:40:30,167 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:40:30,167 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:40:30,167 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:40:30,168 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:40:30,168 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:40:30,168 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:40:30,168 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 17:40:30,168 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:40:30,168 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:40:30,168 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:40:30,211 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 17:40:30,215 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:40:30,215 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:40:30,215 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:40:30,215 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:40:30,215 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:40:30,215 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:40:30,215 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 17:40:30,215 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:40:30,216 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:40:30,216 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:40:30,216 - skill_matrix - INFO - メインウィンドウ表示
+Application started at: 2025-02-28 17:44:33
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 17:44:34,023 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化開始 =====
+2025-02-28 17:44:34,023 - skill_matrix - INFO - StagedTargetTabのインポート試行
+2025-02-28 17:44:34,023 - skill_matrix - INFO - StagedTargetTabインポート成功
+2025-02-28 17:44:34,023 - skill_matrix - INFO - RadarChartDialogのインポート試行
+2025-02-28 17:44:34,023 - skill_matrix - INFO - RadarChartDialogインポート成功
+2025-02-28 17:44:34,023 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化完了 =====
+2025-02-28 17:44:34,024 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 17:44:34,314 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 17:44:34,324 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:44:34,325 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:44:34,325 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:44:34,325 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:44:34,325 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:44:34,325 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:44:34,325 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 17:44:34,325 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:44:34,325 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:44:34,326 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:44:34,368 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 17:44:34,372 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:44:34,372 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:44:34,372 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:44:34,372 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:44:34,372 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:44:34,372 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:44:34,372 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 17:44:34,372 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:44:34,372 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:44:34,372 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:44:34,372 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:44:46,030 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加
+2025-02-28 17:44:54,511 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 17:44:54,512 - skill_matrix - ERROR - ユーザー選択変更エラー: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+2025-02-28 17:44:54,513 - skill_matrix - ERROR - Traceback (most recent call last):
+  File "/Users/sanadatakeshi/Desktop/my_app/skill-matrix-manager-v6.x.1/src/skill_matrix_manager/ui/main_window.py", line 271, in on_user_selection_changed
+    self.skill_gap_tab.set_member(user_name, user_name, group_name)
+TypeError: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+
+2025-02-28 17:44:55,194 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:44:55,196 - skill_matrix - ERROR - ユーザー選択変更エラー: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+2025-02-28 17:44:55,197 - skill_matrix - ERROR - Traceback (most recent call last):
+  File "/Users/sanadatakeshi/Desktop/my_app/skill-matrix-manager-v6.x.1/src/skill_matrix_manager/ui/main_window.py", line 271, in on_user_selection_changed
+    self.skill_gap_tab.set_member(user_name, user_name, group_name)
+TypeError: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+
+2025-02-28 17:44:55,745 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:44:55,746 - skill_matrix - ERROR - ユーザー選択変更エラー: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+2025-02-28 17:44:55,746 - skill_matrix - ERROR - Traceback (most recent call last):
+  File "/Users/sanadatakeshi/Desktop/my_app/skill-matrix-manager-v6.x.1/src/skill_matrix_manager/ui/main_window.py", line 271, in on_user_selection_changed
+    self.skill_gap_tab.set_member(user_name, user_name, group_name)
+TypeError: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+
+2025-02-28 17:44:57,584 - skill_matrix - INFO - グループ選択変更: AAAA
+2025-02-28 17:44:57,584 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:44:57,585 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:44:57,585 - skill_matrix - ERROR - ユーザー選択変更エラー: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+2025-02-28 17:44:57,585 - skill_matrix - ERROR - Traceback (most recent call last):
+  File "/Users/sanadatakeshi/Desktop/my_app/skill-matrix-manager-v6.x.1/src/skill_matrix_manager/ui/main_window.py", line 271, in on_user_selection_changed
+    self.skill_gap_tab.set_member(user_name, user_name, group_name)
+TypeError: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+
+2025-02-28 17:44:57,588 - skill_matrix - INFO - ユーザーリスト更新完了: 2人
+2025-02-28 17:44:58,833 - skill_matrix - INFO - グループ選択変更: BBBB
+2025-02-28 17:44:58,833 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:44:58,835 - skill_matrix - INFO - ユーザーリスト更新完了: 1人
+2025-02-28 17:45:01,682 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:45:01,682 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:45:01,684 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:45:01,684 - skill_matrix - ERROR - ユーザー選択変更エラー: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+2025-02-28 17:45:01,685 - skill_matrix - ERROR - Traceback (most recent call last):
+  File "/Users/sanadatakeshi/Desktop/my_app/skill-matrix-manager-v6.x.1/src/skill_matrix_manager/ui/main_window.py", line 271, in on_user_selection_changed
+    self.skill_gap_tab.set_member(user_name, user_name, group_name)
+TypeError: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+
+2025-02-28 17:45:01,685 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:45:31,783 - skill_matrix - INFO - グループ選択変更: BBBB
+2025-02-28 17:45:31,784 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:45:31,784 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:45:31,785 - skill_matrix - ERROR - ユーザー選択変更エラー: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+2025-02-28 17:45:31,785 - skill_matrix - ERROR - Traceback (most recent call last):
+  File "/Users/sanadatakeshi/Desktop/my_app/skill-matrix-manager-v6.x.1/src/skill_matrix_manager/ui/main_window.py", line 271, in on_user_selection_changed
+    self.skill_gap_tab.set_member(user_name, user_name, group_name)
+TypeError: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+
+2025-02-28 17:45:31,787 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:45:31,787 - skill_matrix - ERROR - ユーザー選択変更エラー: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+2025-02-28 17:45:31,787 - skill_matrix - ERROR - Traceback (most recent call last):
+  File "/Users/sanadatakeshi/Desktop/my_app/skill-matrix-manager-v6.x.1/src/skill_matrix_manager/ui/main_window.py", line 271, in on_user_selection_changed
+    self.skill_gap_tab.set_member(user_name, user_name, group_name)
+TypeError: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+
+2025-02-28 17:45:31,787 - skill_matrix - INFO - ユーザーリスト更新完了: 1人
+2025-02-28 17:45:33,297 - skill_matrix - INFO - グループ選択変更: AAAA
+2025-02-28 17:45:33,298 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:45:33,298 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:45:33,298 - skill_matrix - ERROR - ユーザー選択変更エラー: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+2025-02-28 17:45:33,298 - skill_matrix - ERROR - Traceback (most recent call last):
+  File "/Users/sanadatakeshi/Desktop/my_app/skill-matrix-manager-v6.x.1/src/skill_matrix_manager/ui/main_window.py", line 271, in on_user_selection_changed
+    self.skill_gap_tab.set_member(user_name, user_name, group_name)
+TypeError: SkillGapTab.set_member() takes 2 positional arguments but 4 were given
+
+2025-02-28 17:45:33,300 - skill_matrix - INFO - ユーザーリスト更新完了: 2人
+2025-02-28 17:45:35,015 - skill_matrix - INFO - グループ選択変更: BBBB
+2025-02-28 17:45:35,015 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:45:35,016 - skill_matrix - INFO - ユーザーリスト更新完了: 1人
+Application started at: 2025-02-28 17:48:28
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 17:48:28,469 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化開始 =====
+2025-02-28 17:48:28,469 - skill_matrix - INFO - StagedTargetTabのインポート試行
+2025-02-28 17:48:28,469 - skill_matrix - INFO - StagedTargetTabインポート成功
+2025-02-28 17:48:28,469 - skill_matrix - INFO - RadarChartDialogのインポート試行
+2025-02-28 17:48:28,470 - skill_matrix - INFO - RadarChartDialogインポート成功
+2025-02-28 17:48:28,470 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化完了 =====
+2025-02-28 17:48:28,471 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 17:48:28,760 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 17:48:28,772 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:48:28,772 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:48:28,772 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:48:28,772 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:48:28,773 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:48:28,773 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:48:28,773 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 17:48:28,773 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:48:28,773 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:48:28,773 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:48:28,816 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 17:48:28,820 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:48:28,820 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:48:28,820 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:48:28,820 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:48:28,820 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:48:28,820 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:48:28,820 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 17:48:28,820 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:48:28,821 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:48:28,821 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:48:28,821 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:48:31,233 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 17:48:31,235 - skill_matrix - ERROR - メンバーが見つかりません: ID=AAA
+2025-02-28 17:48:31,736 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:48:31,738 - skill_matrix - ERROR - メンバーが見つかりません: ID=_dummy_AAAA
+2025-02-28 17:48:32,117 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:48:32,119 - skill_matrix - ERROR - メンバーが見つかりません: ID=_dummy_BBBB
+2025-02-28 17:48:39,652 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加
+2025-02-28 17:48:46,674 - skill_matrix - INFO - グループ選択変更: AAAA
+2025-02-28 17:48:46,674 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:48:46,674 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:48:46,675 - skill_matrix - ERROR - メンバーが見つかりません: ID=_dummy_BBBB
+2025-02-28 17:48:46,677 - skill_matrix - INFO - ユーザーリスト更新完了: 2人
+Application started at: 2025-02-28 17:55:17
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 17:55:17,363 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 17:55:17,668 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 17:55:17,671 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:55:17,671 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:55:17,671 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:55:17,671 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:55:17,671 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:55:17,671 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:55:17,671 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 17:55:17,672 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:55:17,672 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:55:17,672 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:55:17,718 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 17:55:17,719 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 17:55:17,719 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 17:55:17,719 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:55:17,719 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:55:17,719 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 17:55:17,719 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 17:55:17,719 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 17:55:17,719 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 17:55:17,719 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 17:55:17,719 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:55:17,719 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 17:55:19,952 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 17:55:19,954 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:55:19,955 - skill_matrix - INFO - メンバーを設定: AAA
+2025-02-28 17:55:20,464 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:55:20,465 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:55:20,465 - skill_matrix - INFO - メンバーを設定: _dummy_BBBB
+2025-02-28 17:55:24,302 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加
+2025-02-28 17:55:28,452 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 17:55:28,454 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:55:28,454 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 17:55:29,081 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 17:55:29,084 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 17:55:29,084 - skill_matrix - INFO - メンバーを設定: _dummy_BBBB
+Application started at: 2025-02-28 18:00:15
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 18:00:16,316 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 18:00:16,623 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 18:00:16,629 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 18:00:16,630 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 18:00:16,630 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:00:16,631 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:00:16,632 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 18:00:16,632 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 18:00:16,632 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 18:00:16,632 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:00:16,632 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:00:16,633 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:00:16,676 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 18:00:16,677 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 18:00:16,677 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 18:00:16,678 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:00:16,678 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:00:16,678 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 18:00:16,678 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 18:00:16,678 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 18:00:16,678 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:00:16,678 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:00:16,678 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:00:16,678 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:00:23,391 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加
+2025-02-28 18:00:23,400 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加しました（UI表示）
+Application started at: 2025-02-28 18:17:12
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 18:17:12,416 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 18:17:12,702 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 18:17:12,705 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 18:17:12,705 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 18:17:12,705 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:17:12,706 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:17:12,706 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 18:17:12,706 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 18:17:12,706 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 18:17:12,706 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:17:12,707 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:17:12,707 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:17:12,747 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 18:17:12,748 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 18:17:12,748 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 18:17:12,748 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:17:12,749 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:17:12,749 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 18:17:12,749 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 18:17:12,749 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 18:17:12,749 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:17:12,749 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:17:12,749 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:17:12,749 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:17:19,762 - skill_matrix - INFO - カテゴリー データベース の新規タブを追加
+2025-02-28 18:17:19,841 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:17:19,846 - skill_matrix - INFO - カテゴリー データベース の新規タブを追加しました（UI表示）
+2025-02-28 18:17:26,593 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:17:26,593 - skill_matrix - INFO - スキルレベル変更: Python=2
+2025-02-28 18:17:27,963 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:17:27,963 - skill_matrix - INFO - スキルレベル変更: JavaScript=2
+2025-02-28 18:17:29,125 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:17:29,126 - skill_matrix - INFO - スキルレベル変更: Java=2
+2025-02-28 18:17:30,192 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:17:30,192 - skill_matrix - INFO - スキルレベル変更: データベース=3
+2025-02-28 18:17:31,309 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:17:31,309 - skill_matrix - INFO - スキルレベル変更: UI/UX=3
+2025-02-28 18:17:46,560 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 18:17:46,564 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:17:46,564 - skill_matrix - INFO - メンバーを設定: AAA
+2025-02-28 18:17:47,240 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 18:17:47,243 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:17:47,244 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 18:17:47,654 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 18:17:47,655 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:17:47,655 - skill_matrix - INFO - メンバーを設定: _dummy_BBBB
+2025-02-28 18:17:48,122 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 18:17:48,124 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:17:48,124 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 18:17:48,539 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 18:17:48,542 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:17:48,542 - skill_matrix - INFO - メンバーを設定: AAA
+2025-02-28 18:18:00,691 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加
+2025-02-28 18:18:00,752 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:18:00,756 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加しました（UI表示）
+2025-02-28 18:18:04,725 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:18:04,725 - skill_matrix - INFO - スキルレベル変更: Python=3
+2025-02-28 18:18:05,537 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:18:05,537 - skill_matrix - INFO - スキルレベル変更: JavaScript=2
+2025-02-28 18:18:06,442 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:18:06,442 - skill_matrix - INFO - スキルレベル変更: Java=3
+2025-02-28 18:18:07,341 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:18:07,341 - skill_matrix - INFO - スキルレベル変更: データベース=2
+2025-02-28 18:18:08,306 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:18:08,306 - skill_matrix - INFO - スキルレベル変更: UI/UX=3
+2025-02-28 18:18:20,960 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 18:18:20,963 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:18:20,963 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 18:18:21,754 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 18:18:21,756 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:18:21,756 - skill_matrix - INFO - メンバーを設定: _dummy_BBBB
+2025-02-28 18:18:22,220 - skill_matrix - INFO - ユーザー選択: _dummy_AAAA
+2025-02-28 18:18:22,222 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:18:22,222 - skill_matrix - INFO - メンバーを設定: _dummy_AAAA
+2025-02-28 18:18:22,621 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 18:18:22,624 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:18:22,624 - skill_matrix - INFO - メンバーを設定: AAA
+2025-02-28 18:18:24,195 - skill_matrix - INFO - グループ選択変更: AAAA
+2025-02-28 18:18:24,195 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:18:24,196 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 18:18:24,197 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:18:24,197 - skill_matrix - INFO - メンバーを設定: AAA
+2025-02-28 18:18:24,200 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 18:18:24,200 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:18:24,201 - skill_matrix - INFO - メンバーを設定: AAA
+2025-02-28 18:18:24,201 - skill_matrix - INFO - ユーザーリスト更新完了: 2人
+2025-02-28 18:18:25,411 - skill_matrix - INFO - グループ選択変更: BBBB
+2025-02-28 18:18:25,412 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:18:25,412 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 18:18:25,413 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:18:25,413 - skill_matrix - INFO - メンバーを設定: AAA
+2025-02-28 18:18:25,414 - skill_matrix - INFO - ユーザーリスト更新完了: 1人
+2025-02-28 18:18:27,261 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 18:18:27,261 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:18:27,263 - skill_matrix - INFO - ユーザー選択: _dummy_BBBB
+2025-02-28 18:18:27,264 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:18:27,264 - skill_matrix - INFO - メンバーを設定: _dummy_BBBB
+2025-02-28 18:18:27,264 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+Application started at: 2025-02-28 18:36:07
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 18:36:07,351 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 18:36:07,640 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 18:36:07,642 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 18:36:07,642 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 18:36:07,642 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:36:07,643 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:36:07,643 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 18:36:07,643 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 18:36:07,643 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 18:36:07,643 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:36:07,643 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:36:07,643 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:36:07,682 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 18:36:07,683 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 18:36:07,683 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 18:36:07,683 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:36:07,683 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:36:07,683 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 18:36:07,683 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 18:36:07,683 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 18:36:07,683 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:36:07,683 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:36:07,683 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:36:07,683 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:36:12,130 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加
+2025-02-28 18:36:12,205 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:36:12,209 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加しました（UI表示）
+2025-02-28 18:36:20,225 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 18:36:20,227 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 18:36:20,228 - skill_matrix - INFO - メンバーを設定: AAA
+2025-02-28 18:36:26,588 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:36:26,590 - skill_matrix - INFO - スキルレベル変更: Python=2
+2025-02-28 18:36:27,688 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:36:27,688 - skill_matrix - INFO - スキルレベル変更: JavaScript=2
+2025-02-28 18:36:28,703 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:36:28,703 - skill_matrix - INFO - スキルレベル変更: Java=3
+2025-02-28 18:36:29,771 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:36:29,772 - skill_matrix - INFO - スキルレベル変更: データベース=3
+2025-02-28 18:36:30,990 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:36:30,991 - skill_matrix - INFO - スキルレベル変更: UI/UX=3
+Application started at: 2025-02-28 18:59:05
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 18:59:05,393 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化開始 =====
+2025-02-28 18:59:05,393 - skill_matrix - INFO - StagedTargetTabのインポート試行
+2025-02-28 18:59:05,395 - skill_matrix - INFO - StagedTargetTabインポート成功
+2025-02-28 18:59:05,395 - skill_matrix - INFO - RadarChartDialogのインポート試行
+2025-02-28 18:59:05,396 - skill_matrix - INFO - RadarChartDialogインポート成功
+2025-02-28 18:59:05,396 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化完了 =====
+2025-02-28 18:59:05,396 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 18:59:05,714 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 18:59:05,719 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 18:59:05,720 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 18:59:05,720 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:59:05,720 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:59:05,720 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 18:59:05,720 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 18:59:05,720 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 18:59:05,720 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:59:05,721 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:59:05,721 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:59:05,762 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 18:59:05,763 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 18:59:05,764 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 18:59:05,764 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:59:05,764 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:59:05,764 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 18:59:05,764 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 18:59:05,764 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 18:59:05,765 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 18:59:05,765 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 18:59:05,765 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:59:05,765 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 18:59:13,212 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加
+2025-02-28 18:59:13,290 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 18:59:13,294 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加しました（UI表示）
+2025-02-28 18:59:25,719 - skill_matrix - INFO - StagedTargetTab: ステージ2に変更
+2025-02-28 18:59:27,835 - skill_matrix - INFO - StagedTargetTab: ステージ3に変更
+2025-02-28 18:59:30,335 - skill_matrix - INFO - StagedTargetTab: ステージ1に変更
+Application started at: 2025-02-28 19:52:18
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 19:52:19,292 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化開始 =====
+2025-02-28 19:52:19,292 - skill_matrix - INFO - StagedTargetTabのインポート試行
+2025-02-28 19:52:19,294 - skill_matrix - INFO - StagedTargetTabインポート成功
+2025-02-28 19:52:19,294 - skill_matrix - INFO - RadarChartDialogのインポート試行
+2025-02-28 19:52:19,296 - skill_matrix - INFO - RadarChartDialogインポート成功
+2025-02-28 19:52:19,296 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化完了 =====
+2025-02-28 19:52:19,296 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 19:52:19,579 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 19:52:19,585 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 19:52:19,585 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 19:52:19,585 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 19:52:19,585 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 19:52:19,585 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 19:52:19,585 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 19:52:19,585 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 19:52:19,585 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 19:52:19,586 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 19:52:19,586 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 19:52:19,626 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 19:52:19,627 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 19:52:19,628 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 19:52:19,628 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 19:52:19,628 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 19:52:19,628 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 19:52:19,628 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 19:52:19,628 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 19:52:19,628 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 19:52:19,628 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 19:52:19,628 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 19:52:19,628 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 19:52:25,835 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加
+2025-02-28 19:52:25,912 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 19:52:25,917 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加しました（UI表示）
+2025-02-28 19:52:29,686 - skill_matrix - INFO - ユーザー選択: AAA
+2025-02-28 19:52:29,688 - skill_matrix - INFO - StagedTargetTab: スキルデータ読み込み - 5件
+2025-02-28 19:52:29,690 - skill_matrix - INFO - StagedTargetTab: メンバー設定 - AAA
+2025-02-28 19:52:29,690 - skill_matrix - INFO - スキルギャップデータ読み込み: 3件
+2025-02-28 19:52:29,690 - skill_matrix - INFO - メンバーを設定: AAA
+2025-02-28 19:52:36,601 - skill_matrix - ERROR - レーダーチャート表示エラー: RadarChartDialog.__init__() takes from 1 to 3 positional arguments but 6 were given
+2025-02-28 19:52:36,603 - skill_matrix - ERROR - Traceback (most recent call last):
+  File "/Users/sanadatakeshi/Desktop/my_app/skill-matrix-manager-v6.x.1/src/skill_matrix_manager/ui/components/skill_gap_tab_impl.py", line 137, in show_radar_chart
+    dialog = RadarChartDialog(
+TypeError: RadarChartDialog.__init__() takes from 1 to 3 positional arguments but 6 were given
+
+2025-02-28 19:52:38,418 - skill_matrix - ERROR - レーダーチャート表示エラー: RadarChartDialog.__init__() takes from 1 to 3 positional arguments but 6 were given
+2025-02-28 19:52:38,419 - skill_matrix - ERROR - Traceback (most recent call last):
+  File "/Users/sanadatakeshi/Desktop/my_app/skill-matrix-manager-v6.x.1/src/skill_matrix_manager/ui/components/skill_gap_tab_impl.py", line 137, in show_radar_chart
+    dialog = RadarChartDialog(
+TypeError: RadarChartDialog.__init__() takes from 1 to 3 positional arguments but 6 were given
+
+Application started at: 2025-02-28 20:00:37
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+Application started at: 2025-02-28 20:00:46
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+Application started at: 2025-02-28 20:00:59
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+Application started at: 2025-02-28 20:02:20
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 20:02:21,343 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化開始 =====
+2025-02-28 20:02:21,343 - skill_matrix - INFO - StagedTargetTabのインポート試行
+2025-02-28 20:02:21,343 - skill_matrix - INFO - StagedTargetTabインポート成功
+2025-02-28 20:02:21,343 - skill_matrix - INFO - RadarChartDialogのインポート試行
+2025-02-28 20:02:21,343 - skill_matrix - INFO - RadarChartDialogインポート成功
+2025-02-28 20:02:21,343 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化完了 =====
+2025-02-28 20:02:21,344 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 20:02:21,640 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 20:02:21,645 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 20:02:21,645 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 20:02:21,645 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 20:02:21,645 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 20:02:21,645 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 20:02:21,645 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 20:02:21,645 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 20:02:21,646 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 20:02:21,646 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 20:02:21,646 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 20:02:21,685 - skill_matrix - INFO - スキルギャップタブ初期化 - 目標値設定特化版
+2025-02-28 20:02:21,687 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 20:02:21,687 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 20:02:21,687 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 20:02:21,687 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 20:02:21,687 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 20:02:21,687 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 20:02:21,687 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 20:02:21,687 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 20:02:21,687 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 20:02:21,687 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 20:02:21,687 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 20:02:39,398 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加
+2025-02-28 20:02:39,475 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 20:02:39,480 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加しました（UI表示）
+Application started at: 2025-02-28 20:05:20
+User: sanadatakeshi
+Dark Mode: False
+--------------------------------------------------
+2025-02-28 20:05:20,751 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化開始 =====
+2025-02-28 20:05:20,751 - skill_matrix - INFO - StagedTargetTabのインポート試行
+2025-02-28 20:05:20,751 - skill_matrix - INFO - StagedTargetTabインポート成功
+2025-02-28 20:05:20,751 - skill_matrix - INFO - RadarChartDialogのインポート試行
+2025-02-28 20:05:20,752 - skill_matrix - INFO - RadarChartDialogインポート成功
+2025-02-28 20:05:20,752 - skill_matrix - INFO - ===== skill_gap_tab パッケージの初期化完了 =====
+2025-02-28 20:05:20,752 - skill_matrix - INFO - スキルギャップタブ関連コンポーネントのインポートに成功しました
+2025-02-28 20:05:20,752 - skill_matrix - INFO - アプリケーション起動
+2025-02-28 20:05:21,035 - skill_matrix - INFO - 段階別目標設定タブを追加しました
+2025-02-28 20:05:21,035 - skill_matrix - INFO - スキルギャップタブを初期化しました
+2025-02-28 20:05:21,036 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 20:05:21,036 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 20:05:21,036 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 20:05:21,036 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 20:05:21,036 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 20:05:21,036 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 20:05:21,036 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 20:05:21,036 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 20:05:21,037 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 20:05:21,037 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 20:05:21,081 - skill_matrix - INFO - 段階別目標設定タブを追加しました
+2025-02-28 20:05:21,082 - skill_matrix - INFO - スキルギャップタブを初期化しました
+2025-02-28 20:05:21,082 - skill_matrix - INFO - グループコンボボックス更新開始
+2025-02-28 20:05:21,082 - skill_matrix - INFO - グループ選択変更: すべて
+2025-02-28 20:05:21,082 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 20:05:21,082 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 20:05:21,083 - skill_matrix - INFO - グループ追加: AAAA
+2025-02-28 20:05:21,083 - skill_matrix - INFO - グループ追加: BBBB
+2025-02-28 20:05:21,083 - skill_matrix - INFO - グループコンボボックス更新完了: 2グループ
+2025-02-28 20:05:21,083 - skill_matrix - INFO - ユーザーリスト更新開始
+2025-02-28 20:05:21,083 - skill_matrix - INFO - ユーザーリスト更新完了: 3人
+2025-02-28 20:05:21,083 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 20:05:21,083 - skill_matrix - INFO - メインウィンドウ表示
+2025-02-28 20:05:33,511 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加
+2025-02-28 20:05:33,589 - skill_matrix - INFO - レーダーチャート描画: 5項目
+2025-02-28 20:05:33,593 - skill_matrix - INFO - カテゴリー プログラミング の新規タブを追加しました（UI表示）

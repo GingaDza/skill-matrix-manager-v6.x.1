@@ -1,162 +1,121 @@
-"""レーダーチャートダイアログ - スキルギャップの視覚化用ダイアログ"""
+#!/usr/bin/env python3
+"""レーダーチャートダイアログ"""
 
-import math
-import traceback
-from PyQt5.QtWidgets import QDialog, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QComboBox, QCheckBox
+from PyQt5.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout, QTableWidget, 
+                           QPushButton, QLabel, QTabWidget, QWidget, QTableWidgetItem)
 from PyQt5.QtCore import Qt
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.figure import Figure
-import numpy as np
 
+from .radar_chart import RadarChart
 from src.skill_matrix_manager.utils.debug_logger import DebugLogger
+
 logger = DebugLogger.get_logger()
 
 class RadarChartDialog(QDialog):
-    """スキルレベルをレーダーチャートで表示するダイアログ"""
+    """レーダーチャート表示ダイアログ"""
     
-    def __init__(self, parent, stages_data):
-        super().__init__(parent)
-        logger.info(f"RadarChartDialog初期化: {len(stages_data)}個のステージデータ")
-        
-        self.stages_data = stages_data
-        self.selected_stages = [True] * len(stages_data)  # 初期状態ですべて選択
-        
+    def __init__(self, parent=None, stages_data=None):
+        """初期化"""
+        super().__init__(parent, Qt.WindowSystemMenuHint | Qt.WindowCloseButtonHint)
         self.setWindowTitle("スキルレーダーチャート")
-        self.setMinimumSize(800, 600)
+        self.setMinimumSize(700, 500)
         
+        # データ
+        self.stages_data = stages_data or []
+        
+        # UI
         self.setup_ui()
+        
+        # データ表示
+        if self.stages_data:
+            self.display_stages_data()
+        
+        logger.info("レーダーチャートダイアログを初期化しました")
     
     def setup_ui(self):
-        """UIの初期化"""
-        main_layout = QVBoxLayout(self)
+        """UI設定"""
+        layout = QVBoxLayout()
+        self.setLayout(layout)
         
-        # チャート表示エリア
-        self.figure = Figure(figsize=(8, 6))
-        self.canvas = FigureCanvas(self.figure)
-        main_layout.addWidget(self.canvas)
+        # タブウィジェット
+        self.tab_widget = QTabWidget()
+        layout.addWidget(self.tab_widget)
         
-        # 表示制御エリア
-        control_layout = QHBoxLayout()
+        # 閉じるボタン
+        btn_layout = QHBoxLayout()
+        btn_layout.addStretch(1)
         
-        # ステージ選択チェックボックスエリア
-        stage_layout = QHBoxLayout()
-        stage_label = QLabel("表示ステージ:")
-        stage_layout.addWidget(stage_label)
-        
-        # 各ステージのチェックボックス
-        self.stage_checkboxes = []
-        for i, stage in enumerate(self.stages_data):
-            checkbox = QCheckBox(stage["name"])
-            checkbox.setChecked(True)  # 初期状態で選択
-            checkbox.stateChanged.connect(
-                lambda state, idx=i: self.on_stage_checked(idx, state)
-            )
-            stage_layout.addWidget(checkbox)
-            self.stage_checkboxes.append(checkbox)
-        
-        control_layout.addLayout(stage_layout)
-        control_layout.addStretch(1)
-        
-        # ボタンエリア
         close_btn = QPushButton("閉じる")
+        close_btn.setFixedWidth(120)
         close_btn.clicked.connect(self.accept)
-        control_layout.addWidget(close_btn)
         
-        main_layout.addLayout(control_layout)
-        
-        # 初期表示
-        self.draw_radar_chart()
+        btn_layout.addWidget(close_btn)
+        layout.addLayout(btn_layout)
     
-    def on_stage_checked(self, stage_index, state):
-        """ステージの選択状態が変更されたときの処理"""
-        self.selected_stages[stage_index] = (state == Qt.Checked)
-        self.draw_radar_chart()
-    
-    def draw_radar_chart(self):
-        """レーダーチャートの描画"""
+    def display_stages_data(self):
+        """ステージデータを表示"""
         try:
-            # 図をクリア
-            self.figure.clear()
+            # タブをクリア
+            self.tab_widget.clear()
             
-            # データの準備
-            # スキル名のリスト (最初のステージから取得)
-            if not self.stages_data or not self.stages_data[0]['targets']:
-                logger.warning("チャートを描画するデータがありません")
-                return
-            
-            # すべてのスキルIDを集める (どのステージにも存在するもの)
-            all_skills = set()
-            for stage in self.stages_data:
-                all_skills.update(stage['targets'].keys())
-            
-            # サンプルスキル名 (実際のアプリではスキルIDからスキル名を取得)
-            skill_names = {
-                "python": "Python",
-                "sql": "SQL",
-                "ui_design": "UI/UX設計",
-                "project_mgmt": "プロジェクト管理",
-                "communication": "コミュニケーション"
-            }
-            
-            # スキルのリスト (名前があるもののみ)
-            skills = [skill_id for skill_id in all_skills if skill_id in skill_names]
-            skill_labels = [skill_names.get(skill_id, skill_id) for skill_id in skills]
-            
-            # スキルの数を確認
-            n_skills = len(skills)
-            if n_skills == 0:
-                logger.warning("表示するスキルがありません")
-                return
-            
-            logger.info(f"レーダーチャート描画: {n_skills}個のスキル, {len(self.stages_data)}個のステージ")
-            
-            # 角度の計算
-            angles = np.linspace(0, 2*math.pi, n_skills, endpoint=False).tolist()
-            angles += angles[:1]  # 閉じたポリゴンにするため最初の点を最後にも追加
-            
-            # サブプロットの作成
-            ax = self.figure.add_subplot(111, polar=True)
-            
-            # 色のリスト
-            colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b']
-            
-            # 選択されたステージのデータをプロット
-            for i, stage in enumerate(self.stages_data):
-                if not self.selected_stages[i]:
-                    continue  # 選択されていないステージはスキップ
+            # 各ステージごとにタブを作成
+            for i, stage_data in enumerate(self.stages_data):
+                stage_name = stage_data.get("name", f"第{i+1}段階")
+                stage_tab = QWidget()
                 
-                # このステージの各スキルのレベル値を取得
-                values = []
-                for skill_id in skills:
-                    values.append(stage['targets'].get(skill_id, 0))
+                tab_layout = QHBoxLayout()
+                stage_tab.setLayout(tab_layout)
                 
-                # 閉じたポリゴンにするため最初の点を最後にも追加
-                values += values[:1]
+                # 左側: レーダーチャート
+                radar_chart = RadarChart()
+                categories = stage_data.get("categories", [])
+                current_values = stage_data.get("current_values", [])
+                target_values = stage_data.get("target_values", [])
                 
-                # プロット
-                logger.info(f"プロット: {stage['name']}, {len(values)}個の値")
-                ax.plot(angles, values, linewidth=1, linestyle='solid', label=stage['name'], color=colors[i % len(colors)])
-                ax.fill(angles, values, alpha=0.1, color=colors[i % len(colors)])
+                radar_chart.update_chart(
+                    categories, current_values, target_values, 
+                    f"スキルギャップ分析 - {stage_name}"
+                )
+                
+                tab_layout.addWidget(radar_chart)
+                
+                # 右側: データテーブル
+                table = QTableWidget()
+                table.setColumnCount(3)
+                table.setHorizontalHeaderLabels(["スキル", "現在", "目標"])
+                
+                # データ追加
+                row_count = len(categories)
+                table.setRowCount(row_count)
+                
+                for row, (cat, curr, targ) in enumerate(zip(
+                    categories, current_values, target_values if target_values else [0]*row_count
+                )):
+                    # スキル名
+                    item = QTableWidgetItem(cat)
+                    item.setFlags(item.flags() & ~Qt.ItemIsEditable)
+                    table.setItem(row, 0, item)
+                    
+                    # 現在値
+                    item = QTableWidgetItem(str(curr))
+                    item.setFlags(item.flags() & ~Qt.ItemIsEditable)
+                    table.setItem(row, 1, item)
+                    
+                    # 目標値
+                    item = QTableWidgetItem(str(targ))
+                    item.setFlags(item.flags() & ~Qt.ItemIsEditable)
+                    table.setItem(row, 2, item)
+                
+                table.resizeColumnsToContents()
+                table.resizeRowsToContents()
+                
+                tab_layout.addWidget(table)
+                
+                # タブ追加
+                self.tab_widget.addTab(stage_tab, stage_name)
             
-            # 角度ラベルの設定
-            ax.set_xticks(angles[:-1])
-            ax.set_xticklabels(skill_labels)
-            
-            # y軸の設定
-            ax.set_yticks([1, 2, 3, 4, 5])
-            ax.set_ylim(0, 5)
-            
-            # グリッドとレジェンドの設定
-            ax.grid(True)
-            ax.legend(loc='upper right', bbox_to_anchor=(1.1, 1.1))
-            
-            # グラフのタイトル
-            self.figure.suptitle("スキルレベルレーダーチャート", fontsize=14)
-            
-            # キャンバスを更新
-            self.canvas.draw()
+            logger.info(f"レーダーチャート: {len(self.stages_data)}ステージを表示")
             
         except Exception as e:
-            logger.error(f"レーダーチャート描画でエラー: {e}")
+            logger.error(f"ステージデータ表示エラー: {e}")
+            import traceback
             logger.error(traceback.format_exc())

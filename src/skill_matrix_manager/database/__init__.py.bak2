@@ -1,0 +1,11 @@
+from src.skill_matrix_manager.database.db_manager import SkillMatrixDatabase
+
+__all__ = ['SkillMatrixDatabase']
+
+    def get_member_by_name(self, name):
+        """名前からメンバー情報を取得"""
+        self.execute(
+            "SELECT id, name, email, group_name FROM members WHERE name = ?",
+            (name,)
+        )
+        return self.cursor.fetchone()
