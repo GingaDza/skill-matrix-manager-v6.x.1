@@ -13,7 +13,6 @@ from PyQt5.QtCore import QTimer
 from .components.initial_setup_tab import InitialSetupTab
 from .components.skill_evaluation_tab import SkillEvaluationTab
 from .components.initial_setup.tab_handlers import TabHandlers
-from .components.skill_gap_tab_impl import SkillGapTab
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -85,10 +84,7 @@ class MainWindow(QMainWindow):
         # スキル分析タブの作成
         analysis_tab = QTabWidget()
         analysis_tab.addTab(QWidget(), "総合評価")
-        
-        # スキルギャップタブを初期化して追加
-        self.skill_gap_tab = SkillGapTab(self)
-        analysis_tab.addTab(self.skill_gap_tab, "スキルギャップ")
+        analysis_tab.addTab(QWidget(), "スキルギャップ")
 
         # メインタブに追加
         tab_widget.addTab(system_tab, "システム管理")
@@ -143,10 +139,6 @@ class MainWindow(QMainWindow):
             group_name = self.group_combo.currentText()
             # ユーザー情報を全てのタブに反映
             self.tab_handlers.on_member_selected(user_name, user_name, group_name)
-            
-            # スキルギャップタブにメンバー情報を設定
-            if hasattr(self, 'skill_gap_tab'):
-                self.skill_gap_tab.set_member(user_name, user_name, group_name)
 
     def update_user_list(self, group_name):
         """選択されたグループに基づいてユーザーリストを更新"""

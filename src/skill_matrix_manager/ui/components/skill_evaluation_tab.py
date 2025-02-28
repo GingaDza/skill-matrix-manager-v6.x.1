@@ -1,14 +1,20 @@
 import os
-import plotly.graph_objects as go
+import numpy as np
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QGroupBox, QFormLayout, 
     QLabel, QGridLayout, QComboBox, QHBoxLayout, QSpacerItem, QSizePolicy
 )
 from PyQt5.QtCore import QUrl, Qt, pyqtSignal
-from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtGui import QFont
 import tempfile
 from datetime import datetime
+
+# Matplotlibのインポート
+import matplotlib
+matplotlib.use('Qt5Agg')
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.figure import Figure
 
 class SkillEvaluationTab(QWidget):
     skill_updated = pyqtSignal(str, str, int)  # member_id, skill_id, score
@@ -180,7 +186,7 @@ class SkillEvaluationTab(QWidget):
         
         main_layout.addWidget(top_container)
         
-        # チャートコンテナ
+        # チャートコンテナの部分だけ変更
         chart_container = QWidget()
         chart_layout = QVBoxLayout(chart_container)
         chart_layout.setContentsMargins(0, 0, 0, 0)
@@ -189,11 +195,13 @@ class SkillEvaluationTab(QWidget):
         chart_group_layout = QVBoxLayout()
         chart_group_layout.setContentsMargins(10, 15, 10, 10)
         
-        self.web_view = QWebEngineView()
-        self.web_view.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        self.web_view.setMinimumSize(400, 400)
+        # WebEngineViewの代わりにMatplotlibのFigureCanvasを使用
+        self.figure = Figure(figsize=(6, 6), dpi=100)
+        self.canvas = FigureCanvas(self.figure)
+        self.canvas.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        self.canvas.setMinimumSize(400, 400)
         
-        chart_group_layout.addWidget(self.web_view)
+        chart_group_layout.addWidget(self.canvas)
         chart_group.setLayout(chart_group_layout)
         
         chart_group.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
@@ -209,103 +217,107 @@ class SkillEvaluationTab(QWidget):
         self.update_chart()
 
     def create_radar_chart(self):
-        """レーダーチャートを作成"""
-        categories = self.skills + [self.skills[0]]
-        current_r = self.current_values + [self.current_values[0]]
-        target_r = self.target_values + [self.target_values[0]]
-
-        fig = go.Figure()
-
-        # 目標値のプロット
-        fig.add_trace(go.Scatterpolar(
-            r=target_r,
-            theta=categories,
-            fill='toself',
-            name=self.colors['target']['text'],
-            line=dict(color=self.colors['target']['line'], width=1, dash='dot'),
-            fillcolor=self.colors['target']['fill']
-        ))
-
-        # 現在値のプロット
-        fig.add_trace(go.Scatterpolar(
-            r=current_r,
-            theta=categories,
-            fill='toself',
-            name=self.colors['current']['text'],
-            line=dict(color=self.colors['current']['line'], width=1),
-            fillcolor=self.colors['current']['fill']
-        ))
-
-        # レイアウトの設定
-        fig.update_layout(
-            polar=dict(
-                radialaxis=dict(
-                    visible=True,
-                    range=[0, 5],
-                    tickmode='array',
-                    tickvals=[1, 2, 3, 4, 5],
-                    ticktext=['1', '2', '3', '4', '5'],
-                    tickfont=dict(size=12, color=self.colors['text']),
-                    gridcolor=self.colors['grid'],
-                    linecolor=self.colors['grid']
-                ),
-                angularaxis=dict(
-                    direction='clockwise',
-                    tickfont=dict(size=14, color=self.colors['text']),
-                    gridcolor=self.colors['grid'],
-                    linecolor=self.colors['grid']
-                ),
-                bgcolor=self.colors['background']
-            ),
-            showlegend=True,
-            legend=dict(
-                x=0.5,
-                y=-0.1,
-                xanchor='center',
-                yanchor='top',
-                orientation='h',
-                font=dict(size=14, color=self.colors['text'])
-            ),
-            title=dict(
-                text=f"{self.category_name}のスキル評価",
-                x=0.5,
-                y=0.98,
-                xanchor='center',
-                yanchor='top',
-                font=dict(size=18, color=self.colors['text'])
-            ),
-            margin=dict(l=30, r=30, t=80, b=50),
-            paper_bgcolor=self.colors['paper_bg'],
-            plot_bgcolor=self.colors['plot_bg'],
-            autosize=True
-        )
-
-        # HTMLファイルとして保存
-        with tempfile.NamedTemporaryFile(mode='w', suffix='.html', delete=False) as f:
-            fig.write_html(
-                f,
-                include_plotlyjs='cdn',
-                full_html=True,
-                config={
-                    'displayModeBar': False,
-                    'responsive': True,
-                    'frameMargins': 0,
-                    'showAxisDragHandles': False,
-                    'showAxisRangeEntryBoxes': False,
-                    'showTips': False,
-                    'displaylogo': False
-                }
-            )
-            self.temp_files.append(f.name)
-            return f.name
+        """Matplotlibを使ったレーダーチャートを作成"""
+        # 図をクリア
+        self.figure.clear()
+        
+        # 極座標のサブプロットを追加
+        ax = self.figure.add_subplot(111, polar=True)
+        
+        # データ準備
+        categories = self.skills
+        num_vars = len(categories)
+        
+        # 角度の計算 (時計回り、最初のカテゴリを上部に)
+        angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
+        
+        # 閉じた図形にするため、最初の値を最後にも追加
+        current_values = self.current_values + [self.current_values[0]]
+        target_values = self.target_values + [self.target_values[0]]
+        categories = categories + [categories[0]]
+        angles = angles + [angles[0]]
+        
+        # 背景色の設定
+        if self.is_dark_mode:
+            # RGB文字列をタプルに変換
+            bg_color = tuple(int(x) for x in self.colors['paper_bg'].replace('rgb(', '').replace(')', '').split(','))
+            bg_color = (bg_color[0]/255, bg_color[1]/255, bg_color[2]/255)
+            self.figure.patch.set_facecolor(bg_color)
+            ax.set_facecolor(bg_color)
+        
+        # Y軸の範囲を設定
+        ax.set_ylim(0, 5)
+        
+        # 目標値のプロット (点線)
+        # RGB文字列をタプルに変換
+        target_color = tuple(int(x) for x in self.colors['target']['line'].replace('rgb(', '').replace(')', '').split(','))
+        target_color = (target_color[0]/255, target_color[1]/255, target_color[2]/255)
+        
+        ax.plot(angles, target_values, 'o-', linewidth=1, 
+                linestyle='dashed', color=target_color, 
+                label=self.colors['target']['text'])
+        ax.fill(angles, target_values, alpha=0.1, color=target_color)
+        
+        # 現在値のプロット (実線)
+        # RGB文字列をタプルに変換
+        current_color = tuple(int(x) for x in self.colors['current']['line'].replace('rgb(', '').replace(')', '').split(','))
+        current_color = (current_color[0]/255, current_color[1]/255, current_color[2]/255)
+        
+        ax.plot(angles, current_values, 'o-', linewidth=1.5,
+                color=current_color, 
+                label=self.colors['current']['text'])
+        ax.fill(angles, current_values, alpha=0.25, color=current_color)
+        
+        # 目盛りの設定
+        ax.set_xticks(angles[:-1])
+        ax.set_xticklabels(categories[:-1])
+        
+        # テキスト色の設定
+        text_color = tuple(int(x) for x in self.colors['text'].replace('rgb(', '').replace(')', '').split(','))
+        text_color = (text_color[0]/255, text_color[1]/255, text_color[2]/255)
+        
+        for label in ax.get_xticklabels():
+            label.set_color(text_color)
+        
+        # Y軸の目盛りを設定
+        ax.set_yticks([1, 2, 3, 4, 5])
+        ax.set_yticklabels(['1', '2', '3', '4', '5'])
+        
+        for label in ax.get_yticklabels():
+            label.set_color(text_color)
+        
+        # グリッドの色を設定
+        grid_color = tuple(int(x) for x in self.colors['grid'].replace('rgb(', '').replace(')', '').split(','))
+        grid_color = (grid_color[0]/255, grid_color[1]/255, grid_color[2]/255, 0.5)
+        ax.grid(True, color=grid_color)
+        
+        # タイトルを追加
+        ax.set_title(f"{self.category_name}のスキル評価", 
+                    color=text_color,
+                    fontsize=14, pad=20)
+        
+        # 凡例を追加
+        legend = ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1),
+                          fancybox=True, shadow=True, ncol=2)
+        
+        # 凡例のテキスト色を設定
+        for text in legend.get_texts():
+            text.set_color(text_color)
+        
+        # レイアウトの調整
+        self.figure.tight_layout()
+        self.canvas.draw()
+        
+        return None  # HTMLファイルを返す必要はなくなった
 
     def update_chart(self):
         """チャートを更新"""
         try:
-            html_file = self.create_radar_chart()
-            self.web_view.setUrl(QUrl.fromLocalFile(html_file))
+            self.create_radar_chart()  # HTMLファイル生成ではなく直接描画
         except Exception as e:
             print(f"Error updating chart: {e}")
+            import traceback
+            traceback.print_exc()
 
     def set_member(self, member_id, member_name, member_group):
         """メンバーが選択された時の処理"""
@@ -350,7 +362,7 @@ class SkillEvaluationTab(QWidget):
                 self.evaluations[self.current_member_id][skill_id] = score
                 
                 # 保存時刻の更新
-                self.last_update_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")  # 現在時刻を更新
+                self.last_update_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 self.date_label.setText(f"最終更新: {self.last_update_time}")
                 
                 # シグナル発信
@@ -371,13 +383,9 @@ class SkillEvaluationTab(QWidget):
 
     def closeEvent(self, event):
         """ウィンドウが閉じられる時の処理"""
-        # 一時ファイルの削除
-        for temp_file in self.temp_files:
-            try:
-                os.remove(temp_file)
-            except OSError:
-                pass
+        # 一時ファイルの削除（不要になった）
         super().closeEvent(event)
+        
     def update_color_mode(self):
         """カラーモードの更新"""
         self.colors = self.dark_colors if self.is_dark_mode else self.light_colors

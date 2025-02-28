@@ -1,0 +1,27 @@
+# 既存のコードの冒頭にデバッグログを追加
+import traceback
+from src.skill_matrix_manager.utils.debug_logger import DebugLogger
+logger = DebugLogger.get_logger()
+
+# 既存のInitialSetupTabクラスの__init__メソッドの先頭に以下を追加:
+def __init__(self, parent=None):
+    logger.info("InitialSetupTab.__init__開始")
+    try:
+        super().__init__(parent)
+        # 親への参照を保持
+        self.parent = parent
+        self.setup_ui()
+        logger.info("InitialSetupTab.__init__完了")
+    except Exception as e:
+        logger.error(f"InitialSetupTab.__init__でエラー: {e}")
+        logger.error(traceback.format_exc())
+
+# 既存のsetup_uiメソッドの冒頭に以下を追加:
+def setup_ui(self):
+    logger.info("InitialSetupTab.setup_ui開始")
+    try:
+        # 以下、既存のコード
+        # ...
+    except Exception as e:
+        logger.error(f"InitialSetupTab.setup_ui でエラー: {e}")
+        logger.error(traceback.format_exc())
